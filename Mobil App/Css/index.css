@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&family=Ubuntu:wght@500;700&display=swap');
+:root {
+    --primaryColor: #3E8E7E;
+    --secondColor: #7CD1B8;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 0.25rem;
+    --lightShadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25);
+    --darkShadow: 4px 10px 5px 0 rgba(0, 0, 0, 0.5);
+    --font1: 'Song Myung', serif;
+    --font2: 'Ubuntu', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font2);
+}
+
+form .login-btn {
+    background: var(--secondColor);
+    color: #fff;
+    letter-spacing: var(--mainSpacing);
+}

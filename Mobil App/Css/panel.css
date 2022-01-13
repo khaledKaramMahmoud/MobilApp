@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&family=Ubuntu:wght@500;700&display=swap');
+:root {
+    --primaryColor: #7CD1B8;
+    --secondColor: #3E8E7E;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 0.15rem;
+    --lightShadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --darkShadow: 4px 10px 5px 0 rgba(0, 0, 0, 0.5);
+    --font1: 'Song Myung', serif;
+    --font2: 'Ubuntu', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font2);
+}
+
+
+/* .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+    25% {
+        height: 0%;
+    }
+    50% {
+        height: 100%;
+    }
+    75% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}
+
+.loader-wrapper.hidden {
+    opacity: 0;
+    visibility: hidden;
+} */
+
+.hide {
+    display: none;
+}
+
+.left-side {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left-side .card {
+    width: 47%;
+    margin: .25rem;
+    padding: .25rem;
+    background: var(--primaryColor);
+    color: #fff;
+    justify-content: space-between;
+}
+
+.left-side .card h3 {
+    font-size: 17px;
+}
+
+.left-side .card .card-icon img {
+    width: 50px;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
+
+.left-side .card .card-icon .install-img,
+.left-side .card .card-icon .clear-img {
+    width: 40px;
+}
+
+
+/* right side */
+
+.right-side .options form .form-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.right-side .options form .form-group input {
+    width: 47%;
+    margin: .25rem;
+    padding: .25rem;
+    box-shadow: var(--lightShadow);
+    word-wrap: break-word;
+}
+
+.right-side .options form .form-group .forAll {
+    background: var(--primaryColor);
+    color: #fff;
+}
+
+.right-side .options form .form-group div .macAdd {
+    background: #ecebe6;
+    text-align: center;
+    font-size: 15px;
+    /* align-self: flex-end; */
+}
+
+th input {
+    /* max-width: 200px; */
+    max-width: 300px;
+    margin: auto;
+}
+
+.table {
+    height: 82vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.table .square-th {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 40px;
+    margin: auto;
+}
+
+th input,
+th div,
+tbody {
+    box-shadow: var(--lightShadow);
+}
+
+.table .square-th div {
+    margin-top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--secondColor);
+}
+
+.modal-ch-file {
+    background: rgb(250, 248, 248);
+    border-radius: 15px;
+}
+
+.modal-ch-file p {
+    font-size: 14px;
+}
+
+.modal-ch-file button {
+    background: darkgray;
+    font-size: small;
+    border-radius: 10px;
+    padding-top: 4.5px;
+}
+
+form .m-sub-btn {
+    background: var(--primaryColor);
+    color: #fff;
+    letter-spacing: var(--mainSpacing);
+    border-radius: 10px;
+}
+
+.modal-msg p {
+    color: var(--primaryColor);
+}
+
+.modal-content form .modal-del-inp {
+    background: rgb(238, 236, 236);
+    border-radius: 10px;
+}
+
+.modal-title {
+    letter-spacing: var(--mainSpacing);
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 570px) {
+    .panel {
+        display: flex;
+        justify-content: space-between;
+    }
+    .panel .left-side {
+        flex: 0 0 20%;
+        flex-direction: column;
+        justify-content: unset;
+    }
+    .left-side .card {
+        width: 120px;
+        height: 120px;
+        margin: unset;
+        justify-content: space-around;
+        margin-top: 1.5rem;
+    }
+    .left-side .card .card-icon img {
+        width: 50px;
+    }
+    .left-side .card .card-icon .install-img,
+    .left-side .card .card-icon .clear-img {
+        width: 30px;
+    }
+    .panel .right-side {
+        flex: 0 0 75%;
+    }
+    .right-side .options form .form-group input {
+        width: auto;
+        min-width: 180px;
+        flex: 0 0 30%;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .left-side .card {
+        width: 160px;
+        height: 120px;
+    }
+    .panel .right-side {
+        flex: 0 0 77%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .panel .left-side {
+        flex: 0 0 20%;
+    }
+    .left-side .card {
+        width: 180px;
+        height: 120px;
+    }
+    .left-side .card .card-icon img {
+        width: 50px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .panel .left-side {
+        flex: 0 0 16%;
+    }
+    .left-side .card {
+        width: 180px;
+        height: 120px;
+    }
+    .left-side .card .card-icon img {
+        width: 50px;
+    }
+    .panel .right-side {
+        flex: 0 0 84%;
+    }
+}
